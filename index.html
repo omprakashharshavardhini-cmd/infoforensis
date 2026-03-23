@@ -1,200 +1,312 @@
-<svg width="220" height="80" xmlns="http://www.w3.org/2000/svg">
-  <rect width="220" height="80" fill="#0b1f3a"/>
-  <text x="20" y="45" font-size="28" fill="#00e5ff" font-family="Arial" font-weight="bold">
-  InfoForensis
-  </text>
-  <circle cx="190" cy="40" r="15" stroke="#00e5ff" stroke-width="3" fill="none"/>
-</svg>
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Infoforensis</title>
 
 <style>
 
-body{
-font-family: Arial;
+*{
 margin:0;
-background:#f4f6f9;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
 }
 
-header{
-background:#0b1f3a;
+body{
+background:#020617;
 color:white;
-padding:15px;
-text-align:center;
+overflow-x:hidden;
 }
+
+/* Particle Background */
+
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* Navigation */
 
 nav{
-background:#132b50;
-padding:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+}
+
+.logo{
+display:flex;
+align-items:center;
+font-size:24px;
+font-weight:bold;
+color:#38bdf8;
+}
+
+.logo img{
+width:40px;
+margin-right:10px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+}
+
+/* Hero */
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+color:#38bdf8;
+}
+
+.hero p{
+margin-top:15px;
+max-width:700px;
+font-size:18px;
+line-height:1.6;
+}
+
+/* Sections */
+
+.section{
+padding:80px 60px;
 text-align:center;
 }
 
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:bold;
+.section h2{
+font-size:36px;
+margin-bottom:40px;
+color:#38bdf8;
 }
 
-section{
-padding:40px;
-}
+/* Cards */
 
-h2{
-color:#0b1f3a;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-background:white;
-padding:20px;
-margin:15px;
-border-radius:8px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:12px;
+backdrop-filter:blur(10px);
+transition:0.3s;
 }
 
+.card:hover{
+transform:scale(1.05);
+background:rgba(255,255,255,0.1);
+}
+
+/* Downloads */
+
+.download a{
+display:block;
+margin:10px;
+color:#38bdf8;
+}
+
+/* Form */
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+}
+
+input,textarea{
+margin:10px 0;
+padding:12px;
+border-radius:6px;
+border:none;
+}
+
+button{
+padding:12px;
+background:#38bdf8;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* Footer */
+
 footer{
-background:#0b1f3a;
-color:white;
 text-align:center;
-padding:15px;
+padding:20px;
+background:#000;
+margin-top:50px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
-<h1>Infoforensis</h1>
-<p>Your Learning Hub for Forensic Science</p>
-</header>
+<div id="particles-js"></div>
+
+<!-- Navigation -->
 
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#courses">Our Courses & Ideas</a>
-<a href="#problems">Problem Solving</a>
-<a href="#contact">Contact</a>
+
+<div class="logo">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
+
+Infoforensis
+
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Courses</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Downloads</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
 </nav>
 
-<section id="home">
+<!-- Hero -->
 
-<h2>What is Forensic Science?</h2>
+<section class="hero">
 
-<p>
-Forensic science is the application of scientific principles and techniques 
-to investigate crimes. It helps investigators analyze physical evidence 
-such as fingerprints, blood samples, DNA, toxic substances, and digital data.
-</p>
+<h1>Infoforensis</h1>
 
 <p>
-Forensic experts assist law enforcement agencies in solving crimes and 
-presenting scientific evidence in courts of law.
+A digital forensic science learning platform providing project ideas, study materials,
+investigation techniques and student support.
 </p>
 
 </section>
 
-<section id="about">
+<!-- Courses -->
 
-<h2>About Infoforensis</h2>
+<section class="section">
 
-<p>
-Infoforensis is an educational platform created for students who are 
-interested in forensic science. The website provides learning materials, 
-project ideas, previous question papers, and helpful resources for students.
-</p>
+<h2>Our Courses</h2>
 
-<p>
-Our goal is to make forensic science learning easier by providing 
-organized notes, useful videos, and problem-solving resources.
-</p>
-
-</section>
-
-<section id="courses">
-
-<h2>Our Courses and Ideas</h2>
+<div class="cards">
 
 <div class="card">
-<h3>Forensic Science Project Ideas</h3>
-
-<ul>
-<li>Fingerprint Identification Techniques</li>
-<li>Bloodstain Pattern Analysis</li>
-<li>Digital Forensics in Cybercrime</li>
-<li>Forensic Toxicology Case Study</li>
-<li>Crime Scene Documentation Methods</li>
-</ul>
-
+<h3>Crime Scene Investigation</h3>
+<p>Learn evidence collection and crime scene documentation techniques.</p>
 </div>
 
 <div class="card">
-<h3>Question Papers</h3>
-
-<p>Download sample forensic science question papers:</p>
-
-<ul>
-<li><a href="#">Forensic Science Previous Year Paper 1</a></li>
-<li><a href="#">Crime Scene Investigation Exam Paper</a></li>
-<li><a href="#">Forensic Toxicology Question Paper</a></li>
-</ul>
-
+<h3>Forensic Toxicology</h3>
+<p>Analysis of drugs, poisons and chemicals in biological samples.</p>
 </div>
 
 <div class="card">
-<h3>Learning Ideas</h3>
-
-<p>Useful learning resources:</p>
-
-<ul>
-<li>Introduction to Forensic Science Notes</li>
-<li>Evidence Collection Methods</li>
-<li>DNA Fingerprinting Basics</li>
-</ul>
-
-<p>Recommended videos:</p>
-
-<iframe width="300" height="200"
-src="https://www.youtube.com/embed/4Y8zQ8K5s9I">
-</iframe>
+<h3>Digital Forensics</h3>
+<p>Investigation of cyber crimes and digital evidence.</p>
+</div>
 
 </div>
 
 </section>
 
-<section id="problems">
+<!-- Project Ideas -->
 
-<h2>Problem Solving Section</h2>
+<section class="section">
 
-<p>
-Students can ask their forensic science doubts and get solutions 
-through notes, explanations, videos, and reference materials.
-</p>
+<h2>Forensic Project Ideas</h2>
 
-<p>
-Common topics solved here include:
-</p>
+<div class="cards">
 
-<ul>
-<li>Crime Scene Investigation techniques</li>
-<li>Evidence analysis</li>
-<li>Forensic toxicology</li>
-<li>Digital forensic methods</li>
-</ul>
+<div class="card">
+<h3>Fingerprint Analysis</h3>
+<p>Study fingerprint patterns and identification methods.</p>
+</div>
+
+<div class="card">
+<h3>Blood Pattern Analysis</h3>
+<p>Understand how bloodstains reveal crime scene events.</p>
+</div>
+
+<div class="card">
+<h3>DNA Extraction</h3>
+<p>Simple experiment extracting DNA from fruits.</p>
+</div>
+
+</div>
 
 </section>
 
-<section id="contact">
+<!-- Question Papers -->
+
+<section class="section download">
+
+<h2>Download Question Papers</h2>
+
+<a href="#">Forensic Science Semester 1 Question Paper</a>
+
+<a href="#">Crime Scene Investigation Question Paper</a>
+
+<a href="#">Forensic Toxicology Question Paper</a>
+
+</section>
+
+<!-- Student Help -->
+
+<section class="section">
+
+<h2>Student Problem Solving</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Ask your forensic science question"></textarea>
+
+<button type="submit">Submit Question</button>
+
+</form>
+
+</section>
+
+<!-- Contact -->
+
+<section class="section">
 
 <h2>Contact</h2>
 
-<p><b>Founder:</b> Harshavardhini</p>
-<p><b>Co-Founder:</b> Sanjay</p>
+<p>Founder : Harshavardhini</p>
 
-<p>Email: infoforensis@gmail.com</p>
+<p>Co-Founder : Sanjay</p>
 
 </section>
 
@@ -203,6 +315,25 @@ Common topics solved here include:
 <p>© 2026 Infoforensis | Forensic Science Learning Platform</p>
 
 </footer>
+
+<!-- Particles JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+
+particlesJS("particles-js",{
+
+particles:{
+number:{value:80},
+size:{value:3},
+move:{speed:2},
+line_linked:{enable:true}
+}
+
+});
+
+</script>
 
 </body>
 </html>
